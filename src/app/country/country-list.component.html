@@ -1,0 +1,17 @@
+<div class="row">
+
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="https://www.diffusio.ca/wp-content/uploads/Geolocalisation-de-votre-entreprise.png"  height="170" width="350" alt="" class="img-responsive">
+      </div>
+
+    </div>
+    <h3>Please select your country :) </h3>
+
+    <br>
+    <ul class="list-group">
+      <app-country-start *ngFor="let country of countries" [country]="country" [countryId]="country.id"></app-country-start>
+    </ul>
+  </div>
+</div>
