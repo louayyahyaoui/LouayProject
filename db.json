@@ -1,19 +1,38 @@
 {
-  "posts": [
+  "country": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "nom": "ariana"
+    },
+    {
+      "id": 2,
+      "nom": "Ben Arous"
+    },
+    {
+      "id": 3,
+      "nom": "Tunis"
+    },
+    {
+      "id": 4,
+      "nom": "Kasserine"
+    },
+    {
+      "id": 5,
+      "nom": "Mahdia"
     }
   ],
-  "comments": [
+  "station": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "nom": "Petite Ariana",
+      "countryId": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
+  "bus": {
+    "id": 1,
+    "idStation": 1,
+    "price": 2,
+    "img": "https://www.tictactrip.eu/react-app/company-searchHeader-bus.jpg",
+    "time": 2
   }
 }
