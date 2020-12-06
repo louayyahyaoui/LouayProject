@@ -20,6 +20,8 @@ import {CountryDetailComponent} from './country/country-detail.component';
 import {CountryListComponent} from './country/country-list.component';
 import {CountryStartComponent} from './country/country-start.component';
 import {HttpClientModule} from '@angular/common/http';
+import { FilterComponent } from './filter-pipe/filter/filter.component';
+import {FilterPipe} from './filter-pipe/filter/filter-bus';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {HttpClientModule} from '@angular/common/http';
     StationStartComponent,
     StationDetailComponent,
     StationListComponent,
-    BusStartComponent
+    BusStartComponent,
+    FilterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+<div style="text-align: center">
+  <h1 style="color: navy">Bus Station Filter</h1>
+  <br/> </div>
+
+<div style="text-align: center">
+  <input class="form-control form-control-lg" type="text" placeholder="type here  time or ticket Price" [(ngModel)]="saerchName">
+</div>
+<br><br>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Image</th>
+      <th>Time</th>
+      <th>Ticket Price</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let b of listBus | filter:saerchName">
+      <td>{{b.id}}</td>
+      <td><img src="{{b.img}}" height="80px" width="120px" alt=""></td>
+      <td><strong>{{b.time}}</strong> minutes remaining </td>
+      <td>cost <strong>{{b["price"]}}</strong> dinars</td>
+
+
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+

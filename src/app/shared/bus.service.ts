@@ -13,4 +13,7 @@ export class BusService {
   getBusById(id: number): Observable<Bus[]>{
     return this.http.get<Bus[]>('http://localhost:3000/bus?idStation=' + id);
   }
+  getAllBus(): Observable<Bus[]>{
+    return this.http.get<Bus[]>('http://localhost:3000/bus/');
+  }
 }
