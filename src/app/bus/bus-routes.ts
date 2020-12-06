@@ -7,6 +7,6 @@ import {BusStartComponent} from './bus-start.component';
 
 export const BUS_ROUTES: Routes = [
 
-  {path: ':id2', component: BusStartComponent},
+  {path: ':id2', component: BusComponent},
 ];
 

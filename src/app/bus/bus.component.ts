@@ -13,27 +13,23 @@ import {Bus} from '../model/bus';
 })
 export class BusComponent implements OnInit {
 
-   busFound: Bus;
+   busFound: Bus[] = [];
   private stationIndex: number;
-  private countryIndex: number;
   private subscription: Subscription;
   constructor(
-    private cs: CountryService,
     private router: Router,
     private route: ActivatedRoute,
-    private stationService: StationService,
     private bs: BusService,
   ) { }
 
   ngOnInit(): void {
+
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         this.stationIndex = params["idstation"];
-        this.countryIndex = params["idcountry"];
-        this.bs.getBusById(this.stationIndex).subscribe( next => this.busFound = next);
+        this.bs.getBusById(this.stationIndex).subscribe((next) => this.busFound = next , (error) => console.log(error) );
         console.log(this.busFound);
-      }
-    );
+      });
   }
 
 }

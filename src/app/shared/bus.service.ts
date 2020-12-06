@@ -10,7 +10,7 @@ export class BusService {
 
   constructor(private http: HttpClient) { }
 
-  getBusById(id: number): Observable<Bus>{
-    return this.http.get<Bus>('http://localhost:3000/bus?idStation=' + id);
+  getBusById(id: number): Observable<Bus[]>{
+    return this.http.get<Bus[]>('http://localhost:3000/bus?idStation=' + id);
   }
 }
