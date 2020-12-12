@@ -31,6 +31,7 @@ import {ChauffeurListComponent} from './chauffeurs/chauffeur-list/chauffeur-list
 import {ChauffeurComponent} from './chauffeurs/chauffeur/chauffeur.component';
 import {ChauffeurStartComponent} from './chauffeurs/chauffeur-start/chauffeur-start.component';
 import {ChauffeurService} from './shared/chauffeur.service';
+import { FilterChauffeurPipe } from './chauffeurs/filter-chauffeur.pipe';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {ChauffeurService} from './shared/chauffeur.service';
     LoginComponent,
     ChauffeurListComponent,
     ChauffeurComponent,
-    ChauffeurStartComponent
+    ChauffeurStartComponent,
+    FilterChauffeurPipe
   ],
   imports: [
     BrowserModule,

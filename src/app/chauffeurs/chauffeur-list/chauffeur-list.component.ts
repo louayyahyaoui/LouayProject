@@ -10,6 +10,7 @@ import {Chauffeur} from '../../model/chauffeur';
 })
 export class ChauffeurListComponent implements OnInit {
 
+  saerchName: string = '';
   constructor(
     public chauffeurService: ChauffeurService,
     private toastrService: ToastrService
