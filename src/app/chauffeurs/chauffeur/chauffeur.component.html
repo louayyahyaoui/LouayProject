@@ -1,0 +1,35 @@
+<div class="emp-form">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input placeholder="First Name" class="form-control" [(ngModel)]="chauffeurService.currentChauffeur.firstName">
+    </div>
+    <div class="col-md-6 form-group">
+      <input placeholder="Last Name" class="form-control" [(ngModel)]="chauffeurService.currentChauffeur.lastName">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <input placeholder="Station" class="form-control" [(ngModel)]="chauffeurService.currentChauffeur.station">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input placeholder="Contact" class="form-control" [(ngModel)]="chauffeurService.currentChauffeur.contact">
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <button class="btn btn-success btn-lg btn-block" (click)="createOrUpdateChauffeur(chauffeurService.currentChauffeur)">
+        <i class="fa fa-save"></i>
+        SAVE
+      </button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-lg btn-block" (click)="clearChauffeur()">
+        <i class="fa fa-retweet"></i>
+        CLEAR
+      </button>
+    </div>
+  </div>
+</div>

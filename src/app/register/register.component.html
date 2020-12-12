@@ -1,0 +1,94 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form #f="ngForm" (submit)="addUser()" class="form-horizontal" action='' method="POST">
+  <fieldset>
+    <div id="legend">
+      <legend class="">Register</legend>
+    </div>
+
+
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="nom">Nom</label>
+      <div class="controls">
+        <input type="text" id="nom" name="nom" #nom="ngModel" minlength="4" placeholder="" class="input-xlarge" [(ngModel)]="user.nom" required>
+        <div *ngIf="nom.touched" class="mt-3">
+          <div class="alert alert-danger" *ngIf="nom.invalid">
+            <div *ngIf="nom.errors.required">
+              Required
+            </div>
+            <div *ngIf="nom.errors.minlength">
+              min length 4
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- lastName -->
+      <label class="control-label"  for="prenom">Prénom </label>
+      <div class="controls">
+        <input type="text" id="prenom" name="prenom" #prenom="ngModel" minlength="4" placeholder="" class="input-xlarge" [(ngModel)]="user.prenom" required>
+        <div *ngIf="prenom.touched" class="mt-3">
+          <div class="alert alert-danger" *ngIf="prenom.invalid">
+            <div *ngIf="prenom.errors.required">
+              Required
+            </div>
+            <div *ngIf="prenom.errors.minlength">
+              min length 4
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="email" id="email" name="email" #email="ngModel" minlength="4" placeholder="" class="input-xlarge" [(ngModel)]="user.email" required>
+        <div *ngIf="email.touched" class="mt-3">
+          <div class="alert alert-danger" *ngIf="email.invalid">
+            <div *ngIf="email.errors.required">
+              Required
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" name="password" #password="ngModel" minlength="8" placeholder="" class="input-xlarge" [(ngModel)]="user.password" required>
+        <div *ngIf="password.touched" class="mt-3">
+          <div class="alert alert-danger" *ngIf="password.invalid">
+            <div *ngIf="password.errors.required">
+              Required
+            </div>
+            <div *ngIf="password.errors.minlength">
+              min length 8
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button [disabled]="f.invalid" class="btn btn-success" >Register</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
