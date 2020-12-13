@@ -32,6 +32,10 @@ import {ChauffeurComponent} from './chauffeurs/chauffeur/chauffeur.component';
 import {ChauffeurStartComponent} from './chauffeurs/chauffeur-start/chauffeur-start.component';
 import {ChauffeurService} from './shared/chauffeur.service';
 import { FilterChauffeurPipe } from './chauffeurs/filter-chauffeur.pipe';
+import { TodayeComponent } from './weathers/todaye/todaye.component';
+import { WeatherStartComponent } from './weathers/weather-start/weather-start.component';
+import {AgmCoreModule} from '@agm/core';
+import {WeatherService} from './weathers/weather.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,9 @@ import { FilterChauffeurPipe } from './chauffeurs/filter-chauffeur.pipe';
     ChauffeurListComponent,
     ChauffeurComponent,
     ChauffeurStartComponent,
-    FilterChauffeurPipe
+    FilterChauffeurPipe,
+    TodayeComponent,
+    WeatherStartComponent
   ],
   imports: [
     BrowserModule,
@@ -66,9 +72,13 @@ import { FilterChauffeurPipe } from './chauffeurs/filter-chauffeur.pipe';
     ToastrModule.forRoot(),
     NgxSpinnerModule,
     BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyCc6L0sDtBQCXXZwcoZUvplCDtg3Burg3M"
+
+    })
 
   ],
-  providers: [CountryService, StationService, BusService, ChauffeurService],
+  providers: [CountryService, StationService, BusService, ChauffeurService, WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

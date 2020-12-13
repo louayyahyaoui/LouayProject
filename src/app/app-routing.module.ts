@@ -8,6 +8,7 @@ import {LoginComponent} from './login/login.component';
 import {ChauffeurComponent} from './chauffeurs/chauffeur/chauffeur.component';
 import {ChauffeurStartComponent} from './chauffeurs/chauffeur-start/chauffeur-start.component';
 import {ChauffeurListComponent} from './chauffeurs/chauffeur-list/chauffeur-list.component';
+import {WeatherStartComponent} from './weathers/weather-start/weather-start.component';
 
 
 const APP_ROUTES: Routes = [
@@ -17,6 +18,7 @@ const APP_ROUTES: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'chauffeur', component: ChauffeurStartComponent},
+  {path: 'weather', component: WeatherStartComponent},
 
 ];
 
